@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop All Products | FyndIt</title>
+
+    <meta name="description" content="Explore the FyndIt collection across fashion, electronics, beauty, home, books, grocery, sports and accessories.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="header-container">
+
+            <a href="index.html" class="luxury-logo">
+                <span class="logo-wordmark">fyndit.</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="my-orders.html">My Orders</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="cart.html" class="cart-link">
+                    Cart (<span id="cartCount">0</span>)
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="products-page-hero">
+
+        <p>CURATED FOR EVERY YOU</p>
+
+        <h1>Explore Our Collection</h1>
+
+        <span>
+            Discover something special in every category.
+        </span>
+
+    </section>
+
+
+    <!-- PRODUCT FILTERS -->
+    <section class="products-page-section">
+
+        <div class="products-toolbar">
+
+            <div class="filter-group">
+
+                <label for="categoryFilter">Category</label>
+
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label for="sortFilter">Sort By</label>
+
+                <select id="sortFilter">
+                    <option value="default">Recommended</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+
+            </div>
+
+
+            <div class="filter-group search-filter">
+
+                <label for="productSearch">Search Products</label>
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search for products..."
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="products-result-heading">
+
+            <h2>Our Products</h2>
+
+            <p id="productCount">Loading products...</p>
+
+        </div>
+
+
+        <div id="allProductsGrid" class="all-products-grid">
+
+            <p>Loading products...</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+            <h2 class="footer-brand">fyndit.</h2>
+
+            <p>Everything worth finding.</p>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="products.html">Products</a>
+            </div>
+
+            <p class="copyright">
+                © 2026 FyndIt. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="products.js"></script>
+
+</body>
+
+</html>

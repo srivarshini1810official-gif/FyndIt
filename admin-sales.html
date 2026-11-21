@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales Overview | FyndIt Admin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="admin-header">
+        <div class="admin-header-container">
+
+            <a href="admin.html" class="admin-logo">
+                <span>FyndIt.</span>
+                <small>ADMIN</small>
+            </a>
+
+            <div class="admin-header-actions">
+                <a href="admin.html" class="admin-card-link">Dashboard</a>
+                <button id="adminLogoutButton">Logout</button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="admin-sales-section">
+
+        <div class="admin-page-heading">
+            <p>BUSINESS PERFORMANCE</p>
+            <h1>Sales Overview</h1>
+            <span>Track revenue and monitor order performance.</span>
+        </div>
+
+        <section class="sales-stat-grid">
+
+            <div class="sales-stat-card">
+                <p>Total Revenue</p>
+                <h2 id="salesTotalRevenue">₹0.00</h2>
+            </div>
+
+            <div class="sales-stat-card">
+                <p>Total Orders</p>
+                <h2 id="salesTotalOrders">0</h2>
+            </div>
+
+            <div class="sales-stat-card">
+                <p>Completed Orders</p>
+                <h2 id="salesCompletedOrders">0</h2>
+            </div>
+
+            <div class="sales-stat-card">
+                <p>Pending Orders</p>
+                <h2 id="salesPendingOrders">0</h2>
+            </div>
+
+        </section>
+
+        <section class="sales-summary-section">
+
+            <h2>Order Performance</h2>
+
+            <div class="sales-summary-table-container">
+
+                <table class="sales-summary-table">
+
+                    <thead>
+                        <tr>
+                            <th>Order Status</th>
+                            <th>Number of Orders</th>
+                            <th>Revenue</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="salesSummaryTableBody">
+                        <tr>
+                            <td colspan="3">Loading sales data...</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <div id="adminSalesMessage"></div>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 FyndIt. All rights reserved.</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="admin-sales.js"></script>
+
+</body>
+</html>

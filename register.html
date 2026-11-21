@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | FyndIt</title>
+
+    <meta name="description" content="Create your FyndIt customer account.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="luxury-logo">
+                <span class="logo-wordmark">fyndit.</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="products.html">Products</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="cart.html" class="cart-link">
+                    Cart (<span id="cartCount">0</span>)
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- REGISTRATION SECTION -->
+    <main class="auth-page">
+
+        <div class="auth-container register-container">
+
+            <div class="auth-heading">
+
+                <p>JOIN THE FYNDIt EXPERIENCE</p>
+
+                <h1>Create Account</h1>
+
+                <span>
+                    Create your account and discover everything worth finding.
+                </span>
+
+            </div>
+
+
+            <form id="registerForm">
+
+
+                <div class="auth-field">
+
+                    <label for="registerName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        required
+                        minlength="3"
+                    >
+
+                </div>
+
+
+                <div class="auth-field">
+
+                    <label for="registerEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="auth-field">
+
+                    <label for="registerPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="registerPhone"
+                        placeholder="Enter your 10-digit phone number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="auth-field">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="auth-field">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Re-enter your password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <h2 class="register-address-heading">
+                    Delivery Address
+                </h2>
+
+
+                <div class="auth-field">
+
+                    <label for="registerAddress">
+                        Street Address
+                    </label>
+
+                    <textarea
+                        id="registerAddress"
+                        rows="3"
+                        placeholder="Enter your street address"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="auth-field">
+
+                    <label for="registerCity">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerCity"
+                        placeholder="Enter your city"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="auth-field">
+
+                    <label for="registerState">
+                        State
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerState"
+                        placeholder="Enter your state"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="auth-field">
+
+                    <label for="registerPincode">
+                        PIN Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerPincode"
+                        placeholder="Enter 6-digit PIN code"
+                        pattern="[0-9]{6}"
+                        maxlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <p id="registerMessage" class="auth-message"></p>
+
+
+                <button type="submit" id="registerButton">
+                    CREATE ACCOUNT
+                </button>
+
+
+            </form>
+
+
+            <div class="auth-switch">
+
+                <p>
+                    Already have an account?
+                    <a href="login.html">Sign in</a>
+                </p>
+
+            </div>
+
+
+            <div class="auth-back">
+                <a href="index.html">← Back to Home</a>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+            <h2 class="footer-brand">fyndit.</h2>
+
+            <p>Everything worth finding.</p>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+            </div>
+
+            <p class="copyright">
+                © 2026 FyndIt. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="register.js"></script>
+
+</body>
+
+</html>

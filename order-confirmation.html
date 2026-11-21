@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmation | FyndIt</title>
+
+    <meta name="description" content="Your FyndIt order confirmation.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="luxury-logo">
+                <span class="logo-wordmark">fyndit.</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="products.html">Products</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="cart.html" class="cart-link">
+                    Cart (<span id="cartCount">0</span>)
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="order-confirmation-section">
+
+        <div class="order-confirmation-container">
+
+            <div class="confirmation-success-icon">
+                ✓
+            </div>
+
+            <p class="confirmation-eyebrow">
+                THANK YOU FOR SHOPPING WITH FYNDIt
+            </p>
+
+            <h1>Order Placed Successfully!</h1>
+
+            <p class="confirmation-description">
+                Your order has been received.
+                We'll take care of the rest.
+            </p>
+
+            <div class="confirmation-order-id">
+                <span>ORDER ID</span>
+                <h2 id="confirmationOrderId">Loading...</h2>
+            </div>
+
+            <section class="confirmation-details">
+
+                <h2>Order Details</h2>
+
+                <div id="confirmationItems">
+                    Loading order details...
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="confirmationSubtotal">₹0.00</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span>Free</span>
+                </div>
+
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <span id="confirmationTotal">₹0.00</span>
+                </div>
+
+                <div class="confirmation-extra-details">
+
+                    <p>
+                        <strong>Payment Method:</strong>
+                        <span id="confirmationPayment">-</span>
+                    </p>
+
+                    <p>
+                        <strong>Payment Status:</strong>
+                        <span id="confirmationPaymentStatus">-</span>
+                    </p>
+
+                    <p>
+                        <strong>Order Status:</strong>
+                        <span id="confirmationStatus">-</span>
+                    </p>
+
+                </div>
+
+                <div class="confirmation-address">
+                    <h3>Delivery Address</h3>
+                    <p id="confirmationAddress">Loading address...</p>
+                </div>
+
+            </section>
+
+            <div class="confirmation-actions">
+
+                <a href="products.html" class="confirmation-shop-button">
+                    CONTINUE SHOPPING
+                </a>
+
+                <a href="index.html" class="confirmation-home-link">
+                    Back to Home
+                </a>
+
+            </div>
+
+            <p id="confirmationMessage"></p>
+
+        </div>
+
+    </main>
+
+
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+            <h2 class="footer-brand">fyndit.</h2>
+
+            <p>Everything worth finding.</p>
+
+            <p class="copyright">
+                © 2026 FyndIt. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="firebase-config.js"></script>
+    <script src="order-confirmation.js"></script>
+
+</body>
+</html>

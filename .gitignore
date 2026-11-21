@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment and secret files
+.env
+.env.*
+
+# Customer account credentials and setup scripts
+customer-data.js
+create-customers.js
+setup.js
+setup.html
+
+# Logs
+*.log
+upload-data.js

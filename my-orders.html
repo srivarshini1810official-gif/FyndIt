@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders | FyndIt</title>
+
+    <meta name="description" content="View your FyndIt order history.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="luxury-logo">
+                <span class="logo-wordmark">fyndit.</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="products.html">Products</a>
+                <a href="my-orders.html">My Orders</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="cart.html" class="cart-link">
+                    Cart (<span id="cartCount">0</span>)
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="my-orders-hero">
+
+        <p>YOUR SHOPPING JOURNEY</p>
+
+        <h1>My Orders</h1>
+
+        <span>
+            All your FyndIt purchases, together in one place.
+        </span>
+
+    </section>
+
+
+    <main class="my-orders-section">
+
+        <div class="my-orders-heading">
+            <h2>Order History</h2>
+
+            <span id="myOrdersCount">
+                Loading orders...
+            </span>
+        </div>
+
+        <div id="myOrdersContainer">
+
+            <p class="my-orders-message">
+                Loading your orders...
+            </p>
+
+        </div>
+
+        <div class="my-orders-footer">
+            <a href="products.html">
+                CONTINUE SHOPPING
+            </a>
+        </div>
+
+    </main>
+
+
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+            <h2 class="footer-brand">fyndit.</h2>
+
+            <p>Everything worth finding.</p>
+
+            <p class="copyright">
+                © 2026 FyndIt. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="firebase-config.js"></script>
+    <script src="my-orders.js"></script>
+
+</body>
+</html>

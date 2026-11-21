@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | FyndIt</title>
+
+    <meta name="description" content="Explore product details and shop your favourites at FyndIt.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="header-container">
+
+            <a href="index.html" class="luxury-logo">
+                <span class="logo-wordmark">fyndit.</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="products.html">Products</a>
+                <a href="my-orders.html">My Orders</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="cart.html" class="cart-link">
+                    Cart (<span id="cartCount">0</span>)
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- BREADCRUMB -->
+    <div class="product-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="products.html">Products</a>
+        <span>/</span>
+        <span>Product Details</span>
+    </div>
+
+
+    <!-- PRODUCT DETAILS -->
+    <main class="product-details-section">
+
+        <div id="productDetailsContainer">
+
+            <p>Loading product details...</p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+            <h2 class="footer-brand">fyndit.</h2>
+
+            <p>Everything worth finding.</p>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="index.html#categories">Categories</a>
+            </div>
+
+            <p class="copyright">
+                © 2026 FyndIt. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="product-details.js"></script>
+
+</body>
+
+</html>

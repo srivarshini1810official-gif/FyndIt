@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Management | FyndIt Admin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="admin-header">
+        <div class="admin-header-container">
+
+            <a href="admin.html" class="admin-logo">
+                <span>FyndIt.</span>
+                <small>ADMIN</small>
+            </a>
+
+            <div class="admin-header-actions">
+                <a href="admin.html" class="admin-card-link">Dashboard</a>
+                <button id="adminLogoutButton">Logout</button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="admin-customers-section">
+
+        <div class="admin-page-heading">
+            <p>ORDER MANAGEMENT</p>
+            <h1>Customer Orders</h1>
+            <span>View and manage all customer orders.</span>
+        </div>
+
+        <div class="admin-customers-toolbar">
+
+            <div>
+                <h2>All Orders</h2>
+                <p id="adminOrderCount">Loading orders...</p>
+            </div>
+
+            <input
+                type="text"
+                id="adminOrderSearch"
+                placeholder="Search by order ID or customer..."
+            >
+
+        </div>
+
+        <div class="admin-table-container">
+
+            <table class="admin-customers-table">
+
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Order Date</th>
+                        <th>Items</th>
+                        <th>Total Amount</th>
+                        <th>Payment Method</th>
+                        <th>Order Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="adminOrdersTableBody">
+                    <tr>
+                        <td colspan="8">Loading orders...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div id="adminOrdersMessage"></div>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 FyndIt. All rights reserved.</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="admin-orders.js"></script>
+
+</body>
+</html>
