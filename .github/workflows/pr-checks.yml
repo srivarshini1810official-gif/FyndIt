@@ -1,0 +1,40 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  pr-checks:
+    name: Check Pull Request
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check Pull Request Title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          if [ -z "$PR_TITLE" ]; then
+            echo "Pull request title is missing."
+            exit 1
+          fi
+          echo "Pull request title: $PR_TITLE"
+
+      - name: Check Required Files
+        run: |
+          for file in index.html style.css app.js products.html; do
+            if [ ! -f "$file" ]; then
+              echo "Missing required file: $file"
+              exit 1
+            fi
+          done
+          echo "Pull request file checks passed."

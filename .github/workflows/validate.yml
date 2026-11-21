@@ -1,0 +1,46 @@
+
+name: Validate FyndIt
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  validate:
+    name: Validate Project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check JavaScript Syntax
+        run: |
+          for file in *.js; do
+            if [ -f "$file" ]; then
+              echo "Checking $file"
+              node --check "$file"
+            fi
+          done
+
+      - name: Check Required Project Files
+        run: |
+          for file in index.html style.css app.js products.html products.js; do
+            if [ ! -f "$file" ]; then
+              echo "Missing required file: $file"
+              exit 1
+            fi
+          done
+          echo "All required project files are present."
