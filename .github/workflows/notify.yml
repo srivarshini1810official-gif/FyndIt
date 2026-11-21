@@ -1,0 +1,33 @@
+name: Workflow Notifications
+
+on:
+  workflow_run:
+    workflows:
+      - Validate FyndIt
+      - Pull Request Checks
+      - Lighthouse Performance Audit
+      - Deploy FyndIt Website
+    types:
+      - completed
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  notify:
+    name: Report Workflow Status
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Workflow Notification
+        env:
+          WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
+          WORKFLOW_STATUS: ${{ github.event.workflow_run.conclusion }}
+          WORKFLOW_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          echo "## GitHub Actions Notification" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "**Workflow:** $WORKFLOW_NAME" >> "$GITHUB_STEP_SUMMARY"
+          echo "**Status:** $WORKFLOW_STATUS" >> "$GITHUB_STEP_SUMMARY"
+          echo "**Details:** $WORKFLOW_URL" >> "$GITHUB_STEP_SUMMARY"
